@@ -1,0 +1,37 @@
+C:\\Windows\\System32\\HrtfApo.dll
+C:\\Program Files (x86)\\Microsoft Office\\Office15\\WINWORD.EXE
+D:\\Downloads\\Beijing Municipal Administration of Supervision and Evaluation.rtf
+.rtf\\OpenWithProgids
+\\REGISTRY\\USER\\S-1-5-21-4268117550-1680532631-3976529354-1001\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.rtf\\OpenWithList
+Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.rtf\\OpenWithList
+\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\Winword.exe
+C:\\Program Files (x86)\\Microsoft Office\\Office15\\WINWORD.EXE.Config
+C:\\Windows\\Prefetch\\WINWORD.EXE-933F4B58.pf
+C:\\PROGRAM FILES (X86)\\MICROSOFT OFFICE\\OFFICE15\\WINWORD.EXE
+\\REGISTRY\\USER\\S-1-5-21-4268117550-1680532631-3976529354-1001\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs\\.rtf
+.rtf
+C:\\Users\\Vgnls\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\Beijing Municipal Administration of Supervision and Evaluation.rtf.lnk
+C:\\Program Files (x86)\\Microsoft Office\\Office15\\WINWORD.EXE.Local\\
+\\REGISTRY\\USER\\S-1-5-21-4268117550-1680532631-3976529354-1001\\SOFTWARE\\Microsoft\\Office\\15.0\\Common\\Migration\\Office
+C:\\Program Files (x86)\\Microsoft Office\\Office15\\WINWORD.EXE.3.Manifest
+C:\\Program Files (x86)\\Microsoft Office\\SystemResources\\WINWORD.EXE.mun
+C:\\Program Files (x86)\\Microsoft Office\\Office15\\WINWORD.EXE.config
+\\REGISTRY\\MACHINE\\SOFTWARE\\Classes\\AppID\\winword.exe
+C:\\PROGRA~2\\MICROS~4\\Office15\\WINWORD.EXE
+\\REGISTRY\\MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\ShellCompatibility\\Applications\\winword.exe
+C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\EQUATION\\EQNEDT32.EXE
+\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\EQNEDT32.EXE
+C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\EQUATION\\EQNEDT32.EXE.Manifest
+C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\EQUATION\\EQNEDT32.EXE.Config
+C:\\Windows\\Prefetch\\EQNEDT32.EXE-1BF74887.pf
+C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\EQUATION\\EQNEDT32.EXE.Local\\
+C:\\ProgramData\\OneDrive.exe
+C:\\ProgramData\\OneDrive.exe.Config
+C:\\Windows\\Prefetch\\ONEDRIVE.EXE-DF3042AE.pf
+C:\\Windows\\system32\\OneDrive.exe
+C:\\SystemResources\\OneDrive.exe.mun
+C:\\ProgramData\\OneDrive.exe.Local\\
+C:\\Users\\Vgnls\\AppData\\Roaming\\Microsoft\\Office\\Recent\\Beijing Municipal Administration of Supervision and Evaluation.rtf.LNK
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\THYdbjks
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\RTYgjfdg.sys
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\RTYgjfdg

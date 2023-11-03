@@ -1,0 +1,72 @@
+ProgramFiles(x)\\MicrosoftOffice\\Office\\WINWORD.EXE	0
+D:\\Downloads\\Beijing Municipal Administration of Supervision and Evaluation.rtf	0
+C:\\ProgramFiles(x)\\MicrosoftOffice\\Office\\WINWORD.EXE.Config	0
+C:\\PROGRAMFILES(X)\\MICROSOFTOFFICE\\OFFICE\\WINWORD.EXE	0
+C:\\Users\\Vgnls\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\Beijing Municipal Administration of Supervision and Evaluation.rtf.lnk	0
+C:\\ProgramFiles(x)\\MicrosoftOffice\\Office\\WINWORD.EXE.Local\\	0
+C:\\ProgramFiles(x)\\MicrosoftOffice\\Office\\WINWORD.EXE..Manifest	0
+C:\\ProgramFiles(x)\\MicrosoftOffice\\SystemResources\\WINWORD.EXE.mun	0
+C:\\ProgramFiles(x)\\MicrosoftOffice\\Office\\WINWORD.EXE.config	0
+C:\\PROGRA~\\MICROS~\\Office\\WINWORD.EXE	0
+C:\\ProgramFiles(x)\\CommonFiles\\MicrosoftShared\\EQUATION\\EQNEDT.EXE	0
+C:\\ProgramFiles(x)\\CommonFiles\\MicrosoftShared\\EQUATION\\EQNEDT.EXE.Local\\	0
+C:\\ProgramData\\OneDrive.exe.Config	0
+C:\\Users\\Vgnls\\AppData\\Roaming\\Microsoft\\Office\\Recent\\Beijing Municipal Administration of Supervision and Evaluation.rtf.LNK	0
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\RTYgjfdg.sys	0
+192.168.244.131	0
+C:\\Windows\\system32\\Windows.Data.Pdf.dll	1
+taskhostw.exe	1
+C:\\Users\\0000\\AppData\\Local\\Microsoft\\Windows\\INetCache\\IE\\CJC91XYC\\taskhost[1].exe	1
+C:\\Users\\0000\\Videos\\taskhost.exe	1
+C:\\Users\\0000\\Desktop\\file.pub	1
+pub	1
+.pub\\OpenWithProgids	1
+SystemFileAssociations\\.pub	1
+C:\\Users\\0000\\AppData\\Roaming\\Microsoft\\Office\\Recent\\file.pub	1
+C:\\Users\\0000\\AppData\\Roaming\\Microsoft\\Office\\Recent\\file.pub.LNK	1
+c36	1
+adsadwqdsa.pdf.vbs	2
+C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip:Zone.Identifier	2
+C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip->adsadwqdsa.pdf.vbs	2
+C:\\ProgramData\\Done.vbs	2
+C:\\ProgramData\\Done.vbs:Zone.Identifier:$DATA	2
+C:\\ProgramData\\Done.vbs:Zone.Identifier	2
+RegAsm.exe	2
+C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\amsi.dll	2
+lyceum	2
+D:\\Downloads\\viewPDF.scr	2
+D:\\Downloads\\Notice on Major Project Reform in Beijing.zip	2
+viewPDF.scr	2
+D:\\SystemResources\\viewPDF.scr.mun	3
+viewPDF	3
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\tmnbo123\\zh-CHS\\viewPDF.resources.dll	3
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\tmnbo123\\zh-CHS\\viewPDF.resources\\viewPDF.resources.dll	3
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\tmnbo123\\zh-CHS\\viewPDF.resources.exe	3
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\tmnbo123\\zh-CHS\\viewPDF.resources\\viewPDF.resources.exe	3
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\RarSFX0\\s563.exe	3
+Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\s563.exe	3
+s563.exe	3
+Applications\\s563.exe	3
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\RarSFX0\\s563.exe.Config	3
+C:\\Windows\\Prefetch\\S563.EXE-C229AF9F.pf	3
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\RarSFX0\\f1.jpg	3
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\tmnbo123\\638338425358406916.exe	3
+\\Device\\HarddiskVolume3\\Users\\Vgnls\\AppData\\Local\\Temp\\tmnbo123\\638338425358406916.exe	3
+verbs.exe	3
+89.39.149.18:25625	3
+Transparent Tribe	3
+C:\\programdata\\chrmeziIIa.exe	3
+chrmeziIIa.exe	3
+C:\\ProgramData\\chrmeziIIa.exe.Config	3
+C:\\Windows\\Prefetch\\CHRMEZIIIA.EXE-DE9EFDAB.pf	3
+Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\chrmeziIIa.exe	3
+HarddiskVolume3\\ProgramData\\chrmeziIIa.exe	3
+%SystemDrive%/ProgramData/chrmeziIIa.exe	4
+ziIIa	4
+sysdiag-full-5.0.74.2.exe	4
+C:\\ProgramData\\sysdiag-full-5.0.74.2.exe	4
+Software\\Classes\\Applications\\sysdiag-full-5.0.74.2.exe	4
+Applications\\sysdiag-full-5.0.74.2.exe	4
+HarddiskVolume5\\Downloads\\sysdiag-full-5.0.74.2.exe	4
+194.163.129.89:23352	4
+194.163.129.89:20480	4
