@@ -9,6 +9,7 @@ from torch_geometric.data import NeighborSampler
 from torch_geometric.nn import SAGEConv, GATConv
 from data_process_test import *
 import difflib
+from mysql_con import *
 
 apt_type_cnt = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
@@ -79,7 +80,7 @@ def show(str):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--log', type=str, default='../../my_data/rtf/final-rtf.json')
-parser.add_argument('--threatID', type=str, default='')
+parser.add_argument('--threatID', type=str, default='f1cabd0d-a011-4975-a8bc-5a0a4aaebbc0')
 parser.add_argument('--threatName', type=str, default='')
 parser.add_argument('--model', type=str, default='0')
 args = parser.parse_args()
@@ -361,10 +362,11 @@ for i, x in enumerate(result):
                 node_info['wrong'] = '1'
             else:
                 node_info['wrong'] = '0'
-            node_info['threat_id'] = 'test_id'
-            node_info['apt_type'] = '1'
+            node_info['threat_id'] = threat_id
+            node_info['apt_type'] = get_apt_type(apt_type_cnt)
             node_info['ip'] = '127.0.0.1'
             node_list.append(node_info)
+            write_node_result(node_info)
     except KeyError:
         continue
 
@@ -374,6 +376,10 @@ node_json = json.loads(node_list_str)
 
 ft.write(str(node_json))
 ft.close()
+
+# update threat table
+write_apt_type(get_apt_type(apt_type_cnt), threat_id)
+
 
 # show('Finish testing graph ' + str(graphId) + ' in model ' + str(args.model))
 print(str(apt_type_cnt))
