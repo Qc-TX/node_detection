@@ -344,7 +344,7 @@ fw.close()
 
 # 按活动时间排序，写文件
 # 输出为<id, 节点id, 实际类型, 预测类型, 最近活动时间, 类型是否预测错误, threat id, apt type, ip>
-ft = open('../output/output_time.json', 'w')
+# ft = open('../output/output_time.json', 'w')
 node_list = []
 for i, x in enumerate(result):
     node_info = {}
@@ -366,20 +366,22 @@ for i, x in enumerate(result):
             node_info['apt_type'] = get_apt_type(apt_type_cnt)
             node_info['ip'] = '127.0.0.1'
             node_list.append(node_info)
-            write_node_result(node_info)
     except KeyError:
         continue
 
-node_list = sorted(node_list, key=itemgetter('time'), reverse=True)
-node_list_str = json.dumps(node_list)
-node_json = json.loads(node_list_str)
-
-ft.write(str(node_json))
-ft.close()
+# 按时间顺序写数据库 （其实也不用按时间顺序写，查的时候按时间顺序查就可以
+# select * from node_detection order by time desc;
+# node_list = sorted(node_list, key=itemgetter('time'), reverse=True)
+for one_node in node_list:
+    write_node_result(one_node)
+# node_list_str = json.dumps(node_list)
+# node_json = json.loads(node_list_str)
+#
+# ft.write(str(node_json))
+# ft.close()
 
 # update threat table
 write_apt_type(get_apt_type(apt_type_cnt), threat_id)
-
 
 # show('Finish testing graph ' + str(graphId) + ' in model ' + str(args.model))
 print(str(apt_type_cnt))

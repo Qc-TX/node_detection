@@ -13,7 +13,7 @@ class MysqlTool:
             user=self.user,
             passwd=self.password,
             database='aptsys'
-#            auth_plugin='mysql_native_password'
+            # auth_plugin='mysql_native_password'
         )
 
 
