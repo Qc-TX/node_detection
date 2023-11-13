@@ -4,6 +4,8 @@
 
 基于 https://github.com/threaTrace-detector/threaTrace 中的darpatc cadets处理与检测部分，修改了输入输出和模型训练的部分代码，使用自建数据集重新训练了模型并验证了效果
 
+项目介绍见博客 https://blog.csdn.net/weixin_43832093/article/details/133088528
+
 ## 实现
 
 
