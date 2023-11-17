@@ -37,6 +37,22 @@
     pip install torch==1.9.1
     pip install torch_geometric==1.4.3 
     pip list  #(检查一下）
+
+  5. 可能遇到的问题及解决
+
+> AttributeError: 'NoneType' object has no attribute 'origin'
+
+  参考https://zhuanlan.zhihu.com/p/407535625，重新离线安装torch相关
+  
+> ImportError: cannot import name 'container_abcs'
+
+  修改报错的文件anaconda3/envs/node/lib/python3.6/site-packages/torch_geometric/data/dataloader.py
+  
+    # from torch._six import container_abcs, string_classes, int_classes
+    import collections.abc as container_abcs
+    string_classes = str
+    int_classes = int
+    
   
 ### 数据集准备
 
