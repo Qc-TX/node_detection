@@ -52,15 +52,6 @@ def load_IOC():
     return IOC
 
 
-def random_dic(dicts):
-    dict_key_ls = list(dicts.keys())
-    random.shuffle(dict_key_ls)
-    new_dic = {}
-    for key in dict_key_ls:
-        new_dic[key] = dicts.get(key)
-    return new_dic
-
-
 def calculate_IOC_sim(name: str, IOC_list: dict, t: float):
     flag = 0
     # IOC_list = random_dic(IOC_list)
