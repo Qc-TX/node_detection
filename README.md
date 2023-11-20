@@ -4,6 +4,8 @@
 
 基于 https://github.com/threaTrace-detector/threaTrace 中的darpatc cadets处理与检测部分，修改了输入输出和模型训练的部分代码，使用自建数据集重新训练了模型并验证了效果
 
+项目介绍见博客 https://blog.csdn.net/weixin_43832093/article/details/133088528
+
 ## 实现
 
 
@@ -15,7 +17,7 @@
   2. 部署 PyG，引导: https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html.
 老版本pyg在这里下载：https://data.pyg.org/whl/
 
-  3. 其他需要的Python包: 
+  4. 其他需要的Python包: 
   
     numpy, pandas, argparse, subprocess, os, sys, time, psutil, random, csv, re
     
@@ -28,6 +30,28 @@
     torch-scatter 2.0.9
     torch-sparse 0.6.12
     torch-spline-conv 1.2.1
+
+  4. 参考安装过程
+
+    pip install torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-1.9.1%2Bcpu.html
+    pip install torch==1.9.1
+    pip install torch_geometric==1.4.3 
+    pip list  #(检查一下）
+
+  5. 可能遇到的问题及解决
+
+> AttributeError: 'NoneType' object has no attribute 'origin'
+
+  参考https://zhuanlan.zhihu.com/p/407535625，重新离线安装torch相关
+  
+> ImportError: cannot import name 'container_abcs'
+
+  修改报错的文件anaconda3/envs/node/lib/python3.6/site-packages/torch_geometric/data/dataloader.py
+  
+    # from torch._six import container_abcs, string_classes, int_classes
+    import collections.abc as container_abcs
+    string_classes = str
+    int_classes = int
     
   
 ### 数据集准备
