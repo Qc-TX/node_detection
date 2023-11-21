@@ -15,7 +15,7 @@ apt_type_cnt = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
 def get_apt_type(num_list: list) -> int:
-    return num_list.index(max(num_list))
+    return num_list.index(max(num_list)) + 1
 
 
 def string_similar(s1, s2):
@@ -44,25 +44,35 @@ def string_similar(s1, s2):
 #     return flag
 
 def load_IOC():
-    f_IOC = open('classified_IOC.txt', 'r')
+    f_IOC = open('new_classified_IOC.txt', 'r')
     IOC = {}
     for IOC_line in f_IOC:
-        IOC[IOC_line.strip('\n').split('\t')[0]] = int(IOC_line.strip('\n').split('\t')[1])
+        IOC[IOC_line.strip('\n').split('--')[0]] = int(IOC_line.strip('\n').split('--')[1])
     f_IOC.close()
     return IOC
 
 
+
+
 def calculate_IOC_sim(name: str, IOC_list: dict, t: float):
     flag = 0
+    max_sim = 0
+    max_ioc = 0
     # IOC_list = random_dic(IOC_list)
     for ioc in IOC_list.keys():
-        if string_similar(name, ioc) > t:
+        str_sim = string_similar(name, ioc)
+        if str_sim > max_sim:
+            max_sim = str_sim
+            max_ioc = IOC_list[ioc] - 1
+        else:
+            continue
+
+        if max_sim > t:
             flag = 1
-            apt_type_cnt[IOC_list[ioc]] += 1
-            return flag
+            apt_type_cnt[max_ioc] += 1
         else:
             flag = 0
-    return flag
+    return [flag, max_sim]
 
 
 def show(str):
@@ -201,7 +211,7 @@ for j in range(1):
         final_acc = (len(data.test_mask) - len(fp)) / len(data.test_mask)
         # print(model_path + ' ' + str(loop_num) + '  loss:{:.4f}'.format(loss) + '  acc:{:.4f}'.format(
         #     test_acc) + '  fp:' + str(len(fp)))
-        print(model_path + ' detecting')
+        show(model_path + ' detecting')
         for i in tn:
             data.test_mask[i] = False
         if test_acc == 1: break
@@ -222,31 +232,46 @@ ioc_list = load_IOC()
 # 将id对应到实际节点类型和预测节点类型
 # 维护result列表，result[i] = '1'表示id为i的节点被标记为恶意相关
 result = []
+IOC_match = []
 tot_node = len(data.test_mask)
 for i in range(tot_node):
     result.append('0')
+    IOC_match.append('0')
 for i in range(tot_node):
-    if data.test_mask[i]:
-        result[i] = '1'
-        neighbor = set()
-        if i in adj.keys():
-            for j in adj[i]:
-                neighbor.add(j)
-                if not j in adj.keys(): continue
-                for k in adj[j]:
-                    neighbor.add(k)
-        if i in adj2.keys():
-            for j in adj2[i]:
-                neighbor.add(j)
-                if not j in adj2.keys(): continue
-                for k in adj2[j]:
-                    neighbor.add(k)
-        for j in neighbor:
-            try:
-                if calculate_IOC_sim(node_map[j][0], ioc_list, 0.9) == 1:
+    # if data.test_mask[i]:
+    if (result[i] == '0' and node_map[i][0][0] != "\\" and node_map[i][0][0] != "{" and node_map[i][0][0] != ".") or data.test_mask[i]:
+        sim = calculate_IOC_sim(node_map[i][0], ioc_list, 0.8)
+        if sim[0] == 1 or data.test_mask[i]:
+            result[i] = '1'
+        if sim[1] > 0.9:
+            IOC_match[i] = '1'
+        else:
+            continue
+    else:
+        continue
+    neighbor = set()
+    if i in adj.keys():
+        for j in adj[i]:
+            neighbor.add(j)
+            if not j in adj.keys(): continue
+            for k in adj[j]:
+                neighbor.add(k)
+    if i in adj2.keys():
+        for j in adj2[i]:
+            neighbor.add(j)
+            if not j in adj2.keys(): continue
+            for k in adj2[j]:
+                neighbor.add(k)
+    for j in neighbor:
+        try:
+            if result[j] == '0' and node_map[j][0][0] != "\\" and node_map[j][0][0] != "{" and node_map[j][0][0] != ".":
+                sim = calculate_IOC_sim(node_map[j][0], ioc_list, 0.8)
+                if sim[0] == 1:
                     result[j] = '1'
-            except KeyError:
-                continue
+                if sim[1] > 0.9:
+                    IOC_match[j] = '1'
+        except KeyError:
+            continue
 
 # 读label，等下映射
 f_label = open('../../models/label.txt', 'r')
@@ -256,82 +281,6 @@ for i in f_label:
     label_map[int(temp[1])] = temp[0]
     label_num += 1
 f_label.close()
-
-# 写进alarm
-print('Start writing result.')
-fw = open('../output/alarm.txt', 'w')
-fw.write(str(len(data.test_mask)) + '\n')
-for i in range(len(data.test_mask)):
-    if data.test_mask[i]:
-        neibor = set()
-        if i in adj.keys():
-            for j in adj[i]:
-                neibor.add(j)
-                if not j in adj.keys(): continue
-                for k in adj[j]:
-                    neibor.add(k)
-        if i in adj2.keys():
-            for j in adj2[i]:
-                neibor.add(j)
-                if not j in adj2.keys(): continue
-                for k in adj2[j]:
-                    neibor.add(k)
-
-        if len(neibor) >= 1:
-            fw.write('\n')
-            fw.write(str(i) + ':')
-
-        for j in neibor:
-            try:
-                if result[j] == '1':
-                    fw.write(' ' + str(j))
-            except KeyError:
-                continue
-fw.close()
-
-# 普通写文件
-# 输出为<id, 节点id, 实际类型, 预测类型, 最近活动时间>
-fw = open('../output/output.txt', 'w')
-for i, x in enumerate(result):
-    if x == '1':
-        # print()
-        try:
-            fw.write(str(i) + '  ' + node_map[i][0] + '  ' + label_map[final_result[i][0]] + '  ' + label_map[
-                final_result[i][1]] + '  ' + node_map[i][1] + '\n')
-        except KeyError:
-            try:
-                fw.write(str(i) + '  ' + node_map[i][0] + '  ' + label_map[
-                    final_result[i][0]] + '  ' + "------ERROR------" + '  ' + node_map[i][1] + '\n')
-            except KeyError:
-                continue
-fw.close()
-
-# # 按活动时间排序，写文件
-# # 输出为<id, 节点id, 实际类型, 预测类型, 最近活动时间>
-# ft = open('output_time.json', 'w')
-# node_list = []
-# for i, x in enumerate(result):
-#     node_info = {}
-#     if x == '1':
-#         node_info['id'] = str(i)
-#         node_info['uuid'] = node_map[i][0]
-#         node_info['type'] = label_map[final_result[i][0]]
-#         try:
-#             node_info['pred_type'] = label_map[final_result[i][1]]
-#         except(KeyError):
-#             node_info['pred_type'] = "------ERROR------"
-#         node_info['time'] = node_map[i][1]
-#         if node_info['type'] != node_info['pred_type']:
-#             node_info['wrong'] = '1'
-#         else:
-#             node_info['wrong'] = '0'
-#         node_list.append(node_info)
-#
-# node_list = sorted(node_list, key=itemgetter('time'), reverse=True)
-#
-# for node in node_list:
-#     ft.write(str(node) + '\n')
-# ft.close()
 
 # 按活动时间排序，写文件
 # 输出为<id, 节点id, 实际类型, 预测类型, 最近活动时间, 类型是否预测错误, threat id, apt type, ip>
@@ -355,7 +304,13 @@ for i, x in enumerate(result):
                 node_info['wrong'] = '0'
             node_info['threat_id'] = threat_id
             node_info['apt_type'] = get_apt_type(apt_type_cnt)
-            node_info['ip'] = '127.0.0.1'
+            show("IOC匹配中...")
+            if IOC_match[i] == '1':
+                node_info['IOC'] = 1
+                node_info['wrong'] = '1'
+                node_info['pred_type'] = label_map[final_result[i][1]-1]
+            else:
+                node_info['IOC'] = 0
             node_list.append(node_info)
     except KeyError:
         continue

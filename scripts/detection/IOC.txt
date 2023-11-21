@@ -22,7 +22,6 @@ host.exe
 C:\\Users\\0000\\AppData\\Local\\host.exe
 C:\\Users\\0000\\AppData\\Local\\task.exe
 C:\\Users\\0000\\AppData\\Local\\taskhost.exe
-taskhost.exe
 10.21.167.156:20480
 10.21.167.156
 C:\\Users\\0000\\Desktop\\bin\\P1.exe

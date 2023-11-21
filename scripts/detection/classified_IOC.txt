@@ -2,7 +2,6 @@ C:\\Users\\Zimarnt\\AppData\\Local\\Temp\\Rar$DIa6660.2127\\VanBanGoc_2023.07.10
 VanBanGoc_2023.07.10. TT 03 FINAL.pdf	1
 C:\\Users\\Zimarnt\\AppData\\Local\\Temp\\Rar$DIa6660.2127\\VanBanGoc_2023.07.10. TT 03 FINAL.pdf .exe	1
 VanBanGoc_2023.07.10. TT 03 FINAL.pdf .exe	1
-SOFTWARE\\Classes\\amvfile\\shell\\open\\command	1
 C:\\users\\zimarnt\\appdata\\local\\SystemFailureReporter	2
 C:\\users\\zimarnt\\appdata\\local\\SystemFailureReporter\\b.doc	2
 C:\\users\\zimarnt\\appdata\\local\\SystemFailureReporter\\SystemFailureReporter.exe	2
@@ -14,39 +13,37 @@ SystemFailureReporter	2
 11.0.188.38:47873	2
 taskupload.exe|28de6618185ba6ba	3
 C:\\Users\\0000\\AppData\\Local\\Temp\\system.vbs	3
-task.exe	3
-host.exe	3
 C:\\Users\\0000\\AppData\\Local\\host.exe	3
 C:\\Users\\0000\\AppData\\Local\\task.exe	3
 C:\\Users\\0000\\AppData\\Local\\taskhost.exe	3
-taskhost.exe	3
 10.21.167.156:20480	3
 10.21.167.156	3
 C:\\Users\\0000\\Desktop\\bin\\P1.exe	3
 C:\\Windows\\system32\\Windows.Data.Pdf.dll	4
-taskhostw.exe	4
 C:\\Users\\0000\\AppData\\Local\\Microsoft\\Windows\\INetCache\\IE\\CJC91XYC\\taskhost[1].exe	4
 C:\\Users\\0000\\Videos\\taskhost.exe	4
 C:\\Users\\0000\\Desktop\\file.pub	4
-.pub\\OpenWithProgids	4
-SystemFileAssociations\\.pub	4
 C:\\Users\\0000\\AppData\\Roaming\\Microsoft\\Office\\Recent\\file.pub	4
 C:\\Users\\0000\\AppData\\Roaming\\Microsoft\\Office\\Recent\\file.pub.LNK	4
 C:\\Users\\0000\\AppData\\Roaming\\Microsoft\\Office\\Recent\\file.pub.LNK_	4
-Bandizip.rar	6
-C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip	6
-adsadwqdsa.pdf.vbs	6
-C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip_	6
-C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip:Zone.Identifier	6
-adsadwqdsa.pdf.vbs_	6
-C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip->adsadwqdsa.pdf.vbs	6
-C:\\ProgramData\\Done.vbs	6
-C:\\ProgramData\\Done.vbs:Zone.Identifier:$DATA	6
-C:\\ProgramData\\Done.vbs:Zone.Identifier	6
-RegAsm.exe	6
-C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\amsi.dll	6
-Patchwork------------------------------	6
-ProgramFiles(x)\\MicrosoftOffice\\Office\\WINWORD.EXE	6
+C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip	5
+adsadwqdsa.pdf.vbs	5
+C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip_	5
+C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip:Zone.Identifier	5
+adsadwqdsa.pdf.vbs_	5
+C:\\Users\\0000\\Downloads\\adsadwqdsa.pdf.zip->adsadwqdsa.pdf.vbs	5
+C:\\ProgramData\\Done.vbs	5
+C:\\ProgramData\\Done.vbs:Zone.Identifier:$DATA	5
+C:\\ProgramData\\Done.vbs:Zone.Identifier	5
+C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\amsi.dll	5
+D:\\Downloads\\Beijing Municipal Administration of Supervision and Evaluation.rtf	6
+C:\\Users\\Vgnls\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\Beijing Municipal Administration of Supervision and Evaluation.rtf.lnk	6
+C:\\ProgramFiles(x)\\CommonFiles\\MicrosoftShared\\EQUATION\\EQNEDT.EXE	6
+C:\\ProgramFiles(x)\\CommonFiles\\MicrosoftShared\\EQUATION\\EQNEDT.EXE.Local\\	6
+C:\\ProgramData\\OneDrive.exe.Config	6
+C:\\Users\\Vgnls\\AppData\\Roaming\\Microsoft\\Office\\Recent\\Beijing Municipal Administration of Supervision and Evaluation.rtf.LNK	6
+C:\\Users\\Vgnls\\AppData\\Local\\Temp\\RTYgjfdg.sys	6
+192.168.244.131	6
 D:\\Downloads\\viewPDF.scr	7
 D:\\Downloads\\Notice on Major Project Reform in Beijing.zip	7
 viewPDF.scr	7
@@ -61,7 +58,6 @@ C:\\Users\\Vgnls\\AppData\\Local\\Temp\\tmnbo123\\zh-CHS\\viewPDF.resources.exe	
 C:\\Users\\Vgnls\\AppData\\Local\\Temp\\tmnbo123\\zh-CHS\\viewPDF.resources\\viewPDF.resources.exe	7
 C:\\Windows\\Prefetch\\VIEWPDF.SCR-4B26F2E8.pf_	7
 C:\\Users\\Vgnls\\AppData\\Local\\Temp\\RarSFX0\\s563.exe	7
-Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\s563.exe	7
 s563.exe	7
 Applications\\s563.exe	7
 C:\\Users\\Vgnls\\AppData\\Local\\Temp\\RarSFX0\\s563.exe.Config	7
@@ -75,16 +71,16 @@ C:\\programdata\\chrmeziIIa.exe	8
 chrmeziIIa.exe	8
 C:\\ProgramData\\chrmeziIIa.exe.Config	8
 C:\\Windows\\Prefetch\\CHRMEZIIIA.EXE-DE9EFDAB.pf	8
-Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\chrmeziIIa.exe	8
+Microsoft\\Windows\\CurrentVersion\\App Paths\\chrmeziIIa.exe	8
 HarddiskVolume3\\ProgramData\\chrmeziIIa.exe	8
-Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Custom\\chrmeziIIa.exe	8
-Software\\Classes\\Applications\\chrmeziIIa.exe	8
+Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Custom\\chrmeziIIa.exe	8
+Classes\\Applications\\chrmeziIIa.exe	8
 Applications\\chrmeziIIa.exe	8
 %SystemDrive%/ProgramData/chrmeziIIa.exe	8
 ziIIa	8
 sysdiag-full-5.0.74.2.exe	8
 C:\\ProgramData\\sysdiag-full-5.0.74.2.exe	8
-Software\\Classes\\Applications\\sysdiag-full-5.0.74.2.exe	8
+Classes\\Applications\\sysdiag-full-5.0.74.2.exe	8
 Applications\\sysdiag-full-5.0.74.2.exe	8
 HarddiskVolume5\\Downloads\\sysdiag-full-5.0.74.2.exe	8
 194.163.129.89:23352	8
