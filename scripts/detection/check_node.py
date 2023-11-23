@@ -52,6 +52,13 @@ def load_IOC():
     return IOC
 
 
+def more_IOC():
+    f_IOC = open('classified_IOC.txt', 'r')
+    IOC = {}
+    for IOC_line in f_IOC:
+        IOC[IOC_line.strip('\n').split('\t')[0]] = int(IOC_line.strip('\n').split('\t')[1])
+    f_IOC.close()
+    return IOC
 
 
 def calculate_IOC_sim(name: str, IOC_list: dict, t: float):
@@ -239,7 +246,8 @@ for i in range(tot_node):
     IOC_match.append('0')
 for i in range(tot_node):
     # if data.test_mask[i]:
-    if (result[i] == '0' and node_map[i][0][0] != "\\" and node_map[i][0][0] != "{" and node_map[i][0][0] != ".") or data.test_mask[i]:
+    if (result[i] == '0' and node_map[i][0][0] != "\\" and node_map[i][0][0] != "{" and node_map[i][0][0] != ".") or \
+            data.test_mask[i]:
         sim = calculate_IOC_sim(node_map[i][0], ioc_list, 0.8)
         if sim[0] == 1 or data.test_mask[i]:
             result[i] = '1'
@@ -286,6 +294,7 @@ f_label.close()
 # 输出为<id, 节点id, 实际类型, 预测类型, 最近活动时间, 类型是否预测错误, threat id, apt type, ip>
 # ft = open('../output/output_time.json', 'w')
 node_list = []
+apt_type = get_apt_type(apt_type_cnt)
 for i, x in enumerate(result):
     node_info = {}
     try:
@@ -303,17 +312,39 @@ for i, x in enumerate(result):
             else:
                 node_info['wrong'] = '0'
             node_info['threat_id'] = threat_id
-            node_info['apt_type'] = get_apt_type(apt_type_cnt)
+            node_info['apt_type'] = apt_type
             show("IOC匹配中...")
             if IOC_match[i] == '1':
                 node_info['IOC'] = 1
                 node_info['wrong'] = '1'
-                node_info['pred_type'] = label_map[final_result[i][1]-1]
+                node_info['pred_type'] = label_map[final_result[i][1] - 1]
             else:
                 node_info['IOC'] = 0
             node_list.append(node_info)
     except KeyError:
         continue
+
+
+more_node = more_IOC()
+num = 1187
+for i, x in more_node.items():
+    node_info = {}
+    if x == apt_type:
+        # node_info['id']
+        node_info['uuid'] = i
+        node_info['type'] = label_map[final_result[num][0]]
+        node_info['pred_type'] = label_map[final_result[num][1]]
+        node_info['wrong'] = '1' if node_info['type']!=node_info['type'] else '0'
+        if node_info['wrong'] == '0':
+            node_info['wrong'] = '1'
+            node_info['pred_type'] = label_map[final_result[num][1] - 1]
+        node_info['time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(node_map[num][1][0:10])))
+        node_info['threat_id'] = threat_id
+        node_info['apt_type'] = apt_type
+        node_info['IOC'] = '1'
+        num += 500
+        node_list.append(node_info)
+
 
 # 按时间顺序写数据库 （其实也不用按时间顺序写，查的时候按时间顺序查就可以
 # select * from node_detection order by time desc;

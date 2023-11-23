@@ -24,10 +24,10 @@ class MysqlTool:
                 cursor.execute(sql, args)
                 if commit:
                     self.mysql_conn.commit()
-                    print(f"执行 SQL 语句：{sql}，参数：{args}，数据提交成功")
+                    # print(f"执行 SQL 语句：{sql}，参数：{args}，数据提交成功")
                 else:
                     result = cursor.fetchall()
-                    print(f"执行 SQL 语句：{sql}，参数：{args}，查询到的数据为：{result}")
+                    # print(f"执行 SQL 语句：{sql}，参数：{args}，查询到的数据为：{result}")
                     return result
         except Exception as e:
             print(f"执行 SQL 语句出错：{e}")
@@ -44,7 +44,7 @@ def write_apt_type(apt_type: int, threat_id: str):
 
 def write_node_result(json_node):
     db = MysqlTool()
-    sql = "insert into node_detection values (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-    args = (json_node['id'], json_node['uuid'], json_node['type'], json_node['pred_type'], json_node['time'],
-            json_node['wrong'], json_node['threat_id'], json_node['apt_type'], json_node['ip'])
+    sql = "insert into node_detection(uuid,type,pre_type,time,wrong,threat_id,apt_type,IOC) values (%s,%s,%s,%s,%s,%s,%s,%s)"
+    args = (json_node['uuid'], json_node['type'], json_node['pred_type'], json_node['time'],
+            json_node['wrong'], json_node['threat_id'], json_node['apt_type'], json_node['IOC'])
     db.execute(sql, args, commit=True)

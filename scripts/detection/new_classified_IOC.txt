@@ -18,4 +18,6 @@ D:\\Downloads\\Notice on Major Project Reform in Beijing.zip--7
 chrmeziIIa.exe--8
 sysdiag-full-5.0.74.2.exe--8
 D:\\1.txt--9
-C:\\users\\0000\\appdata\\local\\SystemFailureReporter\\SystemFailureReporter.exe--9
+SystemFailureReporter.exe--9
+sample.exe--10
+ielowutil.exe--10
